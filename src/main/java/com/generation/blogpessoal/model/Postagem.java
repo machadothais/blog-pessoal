@@ -36,6 +36,7 @@ public class Postagem {
 
     @ManyToOne// classe postagem muitos: classe tema um
 	@JsonIgnoreProperties("postagem")
+	private Tema tema;// adicionando o objeto tema (id, descrição)
 
     public Long getId() {
         return this.id;
@@ -68,6 +69,13 @@ public class Postagem {
     public void setData(LocalDateTime data) {
         this.data = data;
     }
+  
+    public Tema getTema() {
+        return this.tema;
+    }
 
+    public void setTema(Tema tema) {
+        this.tema = tema;
+    }
 
 }

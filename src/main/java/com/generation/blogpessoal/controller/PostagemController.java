@@ -37,7 +37,7 @@ public class PostagemController {
 
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAll() {
-		return ResponseEntity.ok(postagemRepository.findAll());// busca a lista de postagens
+		return ResponseEntity.ok(postagemRepository.findAll());// busca a lista de postagens no banco
 	}
 
 	@GetMapping("/{id}")
